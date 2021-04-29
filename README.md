@@ -1,6 +1,12 @@
-# template-react-hook
+# @bscop/use-did-mount
 
-A template to create a new React custom hook.
+React hook to handle componentDidMount, and componentWillUnmount lifecycle events.
+
+## Install
+
+```
+npm i @bscop/use-did-mount
+```
 
 ---
 
