@@ -1,12 +1,18 @@
-import { useState, useCallback } from "react";
+import { useEffect } from "react";
 
-const useCounter =
-  () => {
-    const [count, setCount] = useState(0);
-
-    const increment = useCallback(() => setCount((x) => x + 1), []);
-
-    return { count, increment };
+const useDidMount =
+  (onDidMount, onDidUnmount) => {
+    useEffect(
+      () => {
+        if (typeof onDidMount == "function") {
+          onDidMount();
+        }
+        if (typeof onDidUnmount == "function") {
+          return onDidUnmount;
+        }
+      },
+      [] // eslint-disable-line react-hooks/exhaustive-deps
+    );
   };
 
-export default useCounter;
+export default useDidMount;
