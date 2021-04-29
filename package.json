@@ -1,6 +1,6 @@
 {
   "name": "@bscop/use-did-mount",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React hook to handle componentDidMount, and componentWillUnmount lifecycle events.",
   "main": "package/dist/index.js",
   "module": "package/dist/index.es.js",
@@ -10,7 +10,6 @@
     "lint": "eslint 'package/**'",
     "prepare": "husky install",
     "prepublishOnly": "npm run build",
-    "prerelease": "npm t",
     "release": "standard-version",
     "test": "npm run lint && npm run test:unit",
     "test:coverage": "jest --runInBand --coverage",
