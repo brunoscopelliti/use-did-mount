@@ -1,6 +1,6 @@
-type didUnmountHandler = () => undefined;
+type didUnmountHandler = () => void;
 
-type didMountHandler = () => (didUnmountHandler | undefined);
+type didMountHandler = () => (didUnmountHandler | void);
 
 declare const useDidMount : (onDidMount : didMountHandler) => void;
 
