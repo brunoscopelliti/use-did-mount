@@ -20,11 +20,11 @@ describe("useDidMount", () => {
   });
 
   it("doesn't executed cleanup during re-renders", () => {
-    const onMount = jest.fn();
     const onUnmount = jest.fn();
+    const onMount = jest.fn(() => onUnmount);
 
     const { rerender } = renderHook(() => {
-      useDidMount(onMount, onUnmount);
+      useDidMount(onMount);
     });
 
     expect(onMount).toBeCalledTimes(1);
@@ -38,9 +38,10 @@ describe("useDidMount", () => {
 
   it("executes cleanup when components is unmounted", () => {
     const onUnmount = jest.fn();
+    const onMount = jest.fn(() => onUnmount);
 
     const { unmount } = renderHook(() => {
-      useDidMount(null, onUnmount);
+      useDidMount(onMount);
     });
 
     expect(onUnmount).not.toBeCalled();
