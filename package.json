@@ -4,6 +4,7 @@
   "description": "React hook to handle componentDidMount, and componentWillUnmount lifecycle events.",
   "main": "package/dist/index.js",
   "module": "package/dist/index.es.js",
+  "types": "package/src/index.d.ts",
   "scripts": {
     "prebuild": "rm -rf ./package/dist",
     "build": "rollup -c rollup.config.js",
@@ -25,6 +26,7 @@
   },
   "files": [
     "package/dist",
+    "package/src/index.d.ts",
     "CHANGELOG.md",
     "LICENSE",
     "README.md"
