@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/brunoscopelliti/use-did-mount/compare/v2.0.0...v2.0.1) (2021-04-30)
+
+
+### Bug Fixes
+
+* **types:** using undefined was wrong, better void ([f91a4a2](https://github.com/brunoscopelliti/use-did-mount/commits/f91a4a2ba4461fca0b563b45feca7f406a06e95a))
+
 ## [2.0.0](https://github.com/brunoscopelliti/use-did-mount/compare/v1.0.1...v2.0.0) (2021-04-30)
 
 
