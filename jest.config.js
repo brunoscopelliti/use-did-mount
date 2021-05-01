@@ -1,9 +1,10 @@
 module.exports = {
+  collectCoverageFrom: [
+    "<rootDir>/package/src/*.js",
+  ],
   coverageDirectory: "<rootDir>/coverage",
   coverageReporters: [
-    "html",
-    "lcov",
-    "text",
+    "json",
   ],
   coverageThreshold: {
     global: {
