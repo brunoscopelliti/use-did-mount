@@ -42,7 +42,7 @@ npm test
 
 ### Coverage
 
-Coverage reports are hosted on [codecov](https://codecov.io/).\
+Coverage reports are hosted on [codecov](https://codecov.io/).
 
 ```
 npm run badge:coverage -- --token=<guid>
