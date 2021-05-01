@@ -13,7 +13,6 @@ jobs:
       - run: npm test
       - codecov/upload:
           file: coverage/coverage-final.json
-          flags: frontend
 
 workflows:
   test:
