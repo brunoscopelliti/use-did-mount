@@ -6,8 +6,8 @@
   "module": "package/dist/index.es.js",
   "types": "package/src/index.d.ts",
   "scripts": {
-    "prebuild": "rm -rf ./package/dist",
     "badge:coverage": "npm run test:coverage && codecov",
+    "prebuild": "rm -rf ./package/dist",
     "build": "rollup -c rollup.config.js",
     "lint": "eslint 'package/**'",
     "prepare": "husky install",
