@@ -4,6 +4,7 @@ module.exports = {
   ],
   coverageDirectory: "<rootDir>/coverage",
   coverageReporters: [
+    "html",
     "json",
   ],
   coverageThreshold: {

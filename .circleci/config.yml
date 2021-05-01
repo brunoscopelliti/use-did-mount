@@ -1,8 +1,21 @@
 version: 2.1
+
 orbs:
-  node: circleci/node@3.0.0
+  codecov: codecov/codecov@1.1.5
+
+jobs:
+  unit-tests:
+    docker:
+      - image: cimg/node:16.0.0
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
+      - codecov/upload:
+          file: coverage/coverage-final.json
+          flags: frontend
+
 workflows:
-  node-tests:
+  test:
     jobs:
-      - node/test:
-          version: 15.9.0
+      - unit-tests
