@@ -2,6 +2,7 @@ module.exports = {
   coverageDirectory: "<rootDir>/coverage",
   coverageReporters: [
     "html",
+    "lcov",
     "text",
   ],
   coverageThreshold: {
