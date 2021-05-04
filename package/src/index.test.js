@@ -1,5 +1,3 @@
-/* eslint-env jest */
-
 import { renderHook } from "@testing-library/react-hooks";
 
 import useDidMount from "./";
@@ -12,11 +10,11 @@ describe("useDidMount", () => {
       useDidMount(onMount);
     });
 
-    expect(onMount).toBeCalledTimes(1);
+    expect(onMount).toHaveBeenCalledTimes(1);
 
     rerender();
 
-    expect(onMount).toBeCalledTimes(1);
+    expect(onMount).toHaveBeenCalledTimes(1);
   });
 
   it("doesn't executed cleanup during re-renders", () => {
@@ -27,11 +25,11 @@ describe("useDidMount", () => {
       useDidMount(onMount);
     });
 
-    expect(onMount).toBeCalledTimes(1);
+    expect(onMount).toHaveBeenCalledTimes(1);
 
     rerender();
 
-    expect(onMount).toBeCalledTimes(1);
+    expect(onMount).toHaveBeenCalledTimes(1);
 
     expect(onUnmount).not.toHaveBeenCalled();
   });
@@ -44,10 +42,10 @@ describe("useDidMount", () => {
       useDidMount(onMount);
     });
 
-    expect(onUnmount).not.toBeCalled();
+    expect(onUnmount).not.toHaveBeenCalled();
 
     unmount();
 
-    expect(onUnmount).toBeCalledTimes(1);
+    expect(onUnmount).toHaveBeenCalledTimes(1);
   });
 });
