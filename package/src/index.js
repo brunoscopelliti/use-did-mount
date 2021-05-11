@@ -4,7 +4,7 @@ import { useEffect } from "react";
  * React hook to handle componentDidMount,
  * and componentWillUnmount lifecycle events.
  * @name useDidMount
- * @param {Function} onDidMount
+ * @param {React.EffectCallback} onDidMount
  * @returns {void}
  */
 const useDidMount =

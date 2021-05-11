@@ -1,7 +1,5 @@
-type didUnmountHandler = () => void;
+import React from "react";
 
-type didMountHandler = () => (didUnmountHandler | void);
-
-declare const useDidMount : (onDidMount : didMountHandler) => void;
+declare const useDidMount : (onDidMount : React.EffectCallback) => void;
 
 export default useDidMount;
